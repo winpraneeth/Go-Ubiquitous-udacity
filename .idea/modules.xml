@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Go-Ubiquitous-udacity.iml" filepath="$PROJECT_DIR$/Go-Ubiquitous-udacity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/watchFace/watchFace.iml" filepath="$PROJECT_DIR$/watchFace/watchFace.iml" />
     </modules>
   </component>
 </project>
