@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-bf940f2047a8f86a5adc2b0da65e74bad44aefab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c72b7305d9c42d7729d66694dc984f69896a844">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-e91496de1ca158fb1980b52a7fe3e40c6681206e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-36943ec69cbdc5cfd820040fe82f3afeed630369.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-e50108c40731850cd6b9d5f181b6249fb69de4b2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\glide-3.5.2-c73c609f9bbf346b077fa6172a44b97b48b0bd81.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-09205023bb2cb0387799cea850ed2dc0a92a4c1e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-4d6fac5e0c7b5d2117de1f8561615ea26e6e86a9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-4791433e44cdf6f02c14be891ae43d7021bde500.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-acbf450fd884c8f0dc612a03d7d1956561160ef1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\.gradle\caches\modules-2\files-2.1\com.google.android.apps.muzei\muzei-api\2.0\ea86be2a201e6ad86dacffe774dbc6d89fcb0c92\muzei-api-2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ea86be2a201e6ad86dacffe774dbc6d89fcb0c92">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\muzei-api-2.0-966eb8184f742e2fb8860b1aaf8149ce5b38ad70.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-effe425f15d74335b2ea43f0d89c4ea6189a3648.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-2ec366065e4accdb85c3720f9f3f8b76f0ff3c80.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-b7d1b88722adcc3223e1453f15c4357918d643ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Praneeth\Desktop\AndroidProjects\Go-Ubiquitous-udacity\app\build\intermediates\pre-dexed\debug\classes-640b18bacca910d505d15f43313aacc2d3829bad.jar" />
+    </item>
+
+</items>
