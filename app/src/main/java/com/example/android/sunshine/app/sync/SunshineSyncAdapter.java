@@ -36,6 +36,10 @@ import com.example.android.sunshine.app.R;
 import com.example.android.sunshine.app.Utility;
 import com.example.android.sunshine.app.data.WeatherContract;
 import com.example.android.sunshine.app.muzei.WeatherMuzeiSource;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.wearable.PutDataMapRequest;
+import com.google.android.gms.wearable.PutDataRequest;
+import com.google.android.gms.wearable.Wearable;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -62,6 +66,13 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
     public static final int SYNC_FLEXTIME = SYNC_INTERVAL/3;
     private static final long DAY_IN_MILLIS = 1000 * 60 * 60 * 24;
     private static final int WEATHER_NOTIFICATION_ID = 3004;
+
+    private static final String WEATHER_PATH = "/weather";
+    private static final String WEATHER_INFO_PATH = "/weather-info";
+    private static final String KEY_UUID = "uuid";
+    private static final String HIGH_TEMPERATURE = "high_temperature";
+    private static final String LOW_TEMPERATURE = "low_temperature";
+    private static final String WEATHER_ID = "weather_id";
 
 
     private static final String[] NOTIFY_WEATHER_PROJECTION = new String[] {
@@ -113,7 +124,6 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
         String format = "json";
         String units = "metric";
         int numDays = 14;
-        String app_key="849048ff7b0516f9bf54069665d0e26f";
 
         try {
             // Construct the URL for the OpenWeatherMap query
@@ -132,7 +142,7 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
                     .appendQueryParameter(FORMAT_PARAM, format)
                     .appendQueryParameter(UNITS_PARAM, units)
                     .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
-                    .appendQueryParameter(APPID_PARAM, app_key)
+                    .appendQueryParameter(APPID_PARAM, BuildConfig.OPEN_WEATHER_MAP_API_KEY)
                     .build();
 
             URL url = new URL(builtUri.toString());
@@ -355,6 +365,7 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
                 updateWidgets();
                 updateMuzei();
                 notifyWeather();
+                notifyWatchFace();
             }
             Log.d(LOG_TAG, "Sync Complete. " + cVVector.size() + " Inserted");
             setLocationStatus(getContext(), LOCATION_STATUS_OK);
@@ -382,6 +393,36 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
             context.startService(new Intent(ACTION_DATA_UPDATED)
                     .setClass(context, WeatherMuzeiSource.class));
         }
+    }
+
+    private void notifyWatchFace() {
+        Context context = getContext();
+        String locationQuery = Utility.getPreferredLocation(context);
+
+        Uri weatherUri = WeatherContract.WeatherEntry.buildWeatherLocationWithDate(locationQuery, System.currentTimeMillis());
+
+        // we'll query our contentProvider, as always
+        Cursor cursor = context.getContentResolver().query(weatherUri, NOTIFY_WEATHER_PROJECTION, null, null, null);
+        if (cursor == null) {
+            return;
+        }
+
+        GoogleApiClient googleApiClient = new GoogleApiClient.Builder(context)
+                .addApi(Wearable.API)
+                .build();
+
+        PutDataMapRequest putDataMapRequest = PutDataMapRequest.create(WEATHER_PATH);
+
+        if (cursor.moveToFirst()) {
+            putDataMapRequest.getDataMap().putString(HIGH_TEMPERATURE, Utility.formatTemperature(context, cursor.getDouble(INDEX_MAX_TEMP)));
+            putDataMapRequest.getDataMap().putString(LOW_TEMPERATURE, Utility.formatTemperature(context, cursor.getDouble(INDEX_MIN_TEMP)));
+            putDataMapRequest.getDataMap().putInt(WEATHER_ID, cursor.getInt(INDEX_WEATHER_ID));
+        }
+        cursor.close();
+
+        PutDataRequest weatherRequest = putDataMapRequest.asPutDataRequest();
+        Wearable.DataApi.putDataItem(googleApiClient, weatherRequest);
+
     }
 
     private void notifyWeather() {
