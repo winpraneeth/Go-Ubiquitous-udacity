@@ -17,8 +17,7 @@ public class Utility {
      * @return resource id for the corresponding icon. -1 if no relation is found.
      */
     public static int getIconResourceForWeatherCondition(int weatherId) {
-        // Based on weather code data found at:
-        // http://bugs.openweathermap.org/projects/api/wiki/Weather_Condition_Codes
+
         if (weatherId >= 200 && weatherId <= 232) {
             return R.drawable.ic_storm;
         } else if (weatherId >= 300 && weatherId <= 321) {

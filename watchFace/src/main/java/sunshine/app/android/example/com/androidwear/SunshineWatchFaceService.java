@@ -104,8 +104,6 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
             GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
         private static final String WEATHER_PATH = "/weather";
-        private static final String WEATHER_INFO_PATH = "/weather-info";
-        private static final String KEY_UUID = "uuid";
         private static final String HIGH_TEMPERATURE = "high_temperature";
         private static final String LOW_TEMPERATURE = "low_temperature";
         private static final String WEATHER_ID = "weather_id";
@@ -113,7 +111,6 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
         final Handler mUpdateTimeHandler = new EngineHandler(this);
 
         boolean mRegisteredTimeZoneReceiver = false;
-        int mTapCount;
         Paint mBackgroundPaint;
         Paint mTextTimePaint;
         Paint mTextDatePaint;
@@ -304,30 +301,6 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
             // whether we're in ambient mode), so we may need to start or stop the timer.
             updateTimer();
         }
-
-//        /**
-//         * Captures tap event (and tap type) and toggles the background color if the user finishes
-//         * a tap.
-//         */
-//        @Override
-//        public void onTapCommand(int tapType, int x, int y, long eventTime) {
-//            Resources resources = SunshineWatchFaceService.this.getResources();
-//            switch (tapType) {
-//                case TAP_TYPE_TOUCH:
-//                    // The user has started touching the screen.
-//                    break;
-//                case TAP_TYPE_TOUCH_CANCEL:
-//                    // The user has started a different gesture or otherwise cancelled the tap.
-//                    break;
-//                case TAP_TYPE_TAP:
-//                    // The user has completed the tap gesture.
-//                    mTapCount++;
-//                    mBackgroundPaint.setColor(resources.getColor(mTapCount % 2 == 0 ?
-//                            R.color.background : R.color.background2));
-//                    break;
-//            }
-//            invalidate();
-//        }
 
         @Override
         public void onDraw(Canvas canvas, Rect bounds) {
